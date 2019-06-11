@@ -12,7 +12,6 @@ public class UserAgentParser
 	{
 		UserAgent userAgent = new UserAgent();
 		userAgent.setBrowser(this.browser(userAgentString));
-		userAgent.setVersion(this.browserVersion(userAgentString, userAgent.getBrowser()));
 		userAgent.setEngine(this.engine(userAgentString));
 		userAgent.setEngineVersion(engineVersion(userAgentString));
 		userAgent.setOs(this.OS(userAgentString));
@@ -105,8 +104,6 @@ public class UserAgentParser
 			return Browser.Safari;
 		else if(matches(Browser.OperaPattern, userAgentString))
 			return Browser.Opera;
-		else if(matches(Browser.PS3Pattern, userAgentString))
-			return Browser.PS3;
 		else if(matches(Browser.PSPPattern, userAgentString))
 			return Browser.PSP;
 		else if(matches(Browser.FirefoxPattern, userAgentString))
@@ -141,62 +138,7 @@ public class UserAgentParser
 			return Browser.Unknown;
 	}
 
-	public String browserVersion(String userAgentString, String browser)
-	{
-		Pattern pattern; 
-		
-		if(browser.equalsIgnoreCase(Browser.Chrome))
-		{
-			pattern = BrowserVersion.ChromePattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.Safari))
-		{
-			pattern = BrowserVersion.SafariPattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.PS3))
-		{
-			pattern = BrowserVersion.PS3Pattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.PSP))
-		{
-			pattern = BrowserVersion.PSPPattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.Lotus))
-		{
-			pattern = BrowserVersion.LotusPattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.Blackberry))
-		{
-			pattern = BrowserVersion.BlackberryPattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.YammerDesktop))
-		{
-			pattern = BrowserVersion.YammerDesktopPattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.YammerMobile))
-		{
-			pattern = BrowserVersion.YammerMobilePattern;
-		}
-		else if(browser.equalsIgnoreCase(Browser.ApacheHTTPClient))
-		{
-			pattern = BrowserVersion.ApacheDesktopClientPattern;
-		}
-		else
-		{
-			// Append the Browsers name to the start of the generic "Other" regexp 
-			pattern = Pattern.compile(browser + BrowserVersion.Other, Pattern.CASE_INSENSITIVE); 
-		}
 
-		Matcher matcher = pattern.matcher(userAgentString);
-		if(matcher.find())
-		{
-			return matcher.group(1);
-		}
-		else
-		{
-			return null;
-		}
-	}
 
 	public String OS(String userAgentString)
 	{

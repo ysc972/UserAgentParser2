@@ -1,0 +1,9 @@
+com/kumkee/userAgent/Browser.class
+com/kumkee/userAgent/Engine.class
+com/kumkee/userAgent/UserAgentParser.class
+com/kumkee/userAgent/UserAgent.class
+com/kumkee/userAgent/OS.class
+com/hadoop/project/ParseUserAgentApp$MyReducer.class
+com/hadoop/project/ParseUserAgentApp$MyMapper.class
+com/kumkee/userAgent/Platform.class
+com/hadoop/project/ParseUserAgentApp.class

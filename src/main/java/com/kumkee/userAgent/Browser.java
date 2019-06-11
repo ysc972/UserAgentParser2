@@ -7,11 +7,10 @@ public class Browser {
 	public static final Pattern OperaPattern = Pattern.compile("opera", Pattern.CASE_INSENSITIVE);
 	public static final Pattern ChromePattern = Pattern.compile("chrome", Pattern.CASE_INSENSITIVE); 
 	public static final Pattern KonquerorPattern = Pattern.compile("konqueror", Pattern.CASE_INSENSITIVE);
-	public static final Pattern PS3Pattern = Pattern.compile("playstation 3", Pattern.CASE_INSENSITIVE);
 	public static final Pattern PSPPattern = Pattern.compile("playstation portable", Pattern.CASE_INSENSITIVE);
 	public static final Pattern FirefoxPattern = Pattern.compile("firefox", Pattern.CASE_INSENSITIVE); 
-	public static final Pattern LotusPattern = Pattern.compile("lotus.notes", Pattern.CASE_INSENSITIVE); 
-	public static final Pattern ThumderbirdPattern = Pattern.compile("thunderbird", Pattern.CASE_INSENSITIVE); 
+	public static final Pattern LotusPattern = Pattern.compile("lotus.notes", Pattern.CASE_INSENSITIVE);
+	public static final Pattern ThumderbirdPattern = Pattern.compile("thunderbird", Pattern.CASE_INSENSITIVE);
 	public static final Pattern NetscapePattern = Pattern.compile("netscape", Pattern.CASE_INSENSITIVE); 
 	public static final Pattern SeamonkeyPattern = Pattern.compile("seamonkey", Pattern.CASE_INSENSITIVE); 
 	public static final Pattern OutlookPattern = Pattern.compile("microsoft.outlook", Pattern.CASE_INSENSITIVE); 
